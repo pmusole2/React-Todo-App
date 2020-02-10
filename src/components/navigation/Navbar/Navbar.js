@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../../logo/Logo'
+import NavItems from '../NavItems/NavItems'
 
 import Container from '../../../HOC/layout/elements/Container'
 
@@ -25,11 +26,7 @@ const Navbar = () => {
             <Container>
                 <Wrapper>
                     <Logo />
-                    <nav>
-                        <ul>
-                            <li>Home</li>
-                        </ul>
-                    </nav>
+                    <NavItems />
                 </Wrapper>
             </Container>
         </FixedWrapper>

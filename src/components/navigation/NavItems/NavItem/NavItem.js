@@ -7,7 +7,6 @@ height: 100%;
 `
 
 const A = styled.a`
-
 display: flex;
 text-transform: uppercase;
 align-items: center;
@@ -16,18 +15,17 @@ font-size: 1.2rem;
 padding: 1rem;
 margin: 0 1rem;
 font-weight: 400;
-color: (--color-white);
+color: var(--color-white);
 transition: all 0.2s;
 &:hover {
-    border-bottom: 2px solid (--color-white);
+    border-bottom: 2px solid var(--color-white);
 }
-
 `
 
 const NavItem = ({link, children}) => {
     return (
         <Li>
-            <a href={link}>{children}</a>
+            <A href={link}>{children}</A>
         </Li>
     )
 }
