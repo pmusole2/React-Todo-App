@@ -13,6 +13,10 @@ top:0;
 left:0;
 width:100%;
 height: 6rem;
+
+@media ${props => props.theme.mediaQueries.smallest} {
+    display: none;
+}
 `
 
 const Wrapper = styled.div`
