@@ -11,23 +11,25 @@ const StyledNavLink = styled(NavLink)`
 display: flex;
 text-transform: uppercase;
 align-items: center;
-border-bottom: 2px solid transparent;
+border-bottom: ${props => props.mobile ? '1px solid transparent' : '1px solid transparent'};
 font-size: 1.2rem;
 padding: 1rem;
-margin: 0 1rem;
+margin: ${props => props.mobile ? '1rem' : '1.5rem'};
 font-weight: 400;
 color: var(--color-white);
 transition: all 0.2s;
 cursor: pointer;
 &:hover {
-    border-bottom: 2px solid var(--color-white);
+    border-bottom: ${props => props.mobile ?
+    '1px solid var(--color-white)' :
+    '1px solid var(--color-white)'};
 }
 `
 
-const NavItem = ({link, children}) => {
+const NavItem = ({link, children, mobile}) => {
     return (
         <Li>
-            <StyledNavLink to={link}>{children}</StyledNavLink>
+            <StyledNavLink mobile={mobile} to={link}>{children}</StyledNavLink>
         </Li>
     )
 }
