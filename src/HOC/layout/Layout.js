@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../../components/navigation/Navbar/Navbar'
 import styled from 'styled-components'
 
 const MainWrapper = styled.div`
