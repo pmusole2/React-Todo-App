@@ -24,12 +24,16 @@ cursor: pointer;
     '1px solid var(--color-white)' :
     '1px solid var(--color-white)'};
 }
+
+&.active {
+    border-bottom: ${props => props.mobile ? '1px solid var(--color-white)' : '2px solid var(--color-white);'};
+}
 `
 
-const NavItem = ({link, children, mobile}) => {
+const NavItem = ({link, children, mobile, clicked}) => {
     return (
         <Li>
-            <StyledNavLink mobile={mobile} to={link}>{children}</StyledNavLink>
+            <StyledNavLink exact onClick={clicked} activeClassName="active" mobile={mobile} to={link}>{children}</StyledNavLink>
         </Li>
     )
 }

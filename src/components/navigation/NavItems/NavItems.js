@@ -14,13 +14,13 @@ const Ul = styled.ul`
 `
 
 
-const NavItems = ({mobile}) => {
+const NavItems = ({mobile, clicked}) => {
     return (
         <Nav mobile={mobile}>
             <Ul mobile={mobile}>
-                <NavItem mobile={mobile} link='/'>Home</NavItem>
-                <NavItem link='todos'>Todos</NavItem>
-                <NavItem link='/Contact'>Contact Us</NavItem>
+                <NavItem clicked={clicked} mobile={mobile} link='/'>Home</NavItem>
+                <NavItem clicked={clicked} mobile={mobile} link='todos'>Todos</NavItem>
+                <NavItem clicked={clicked} mobile={mobile} link='/Contact'>Contact Us</NavItem>
             </Ul>
         </Nav>
     )
